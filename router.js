@@ -24,5 +24,7 @@ app.get('*',(req,res)=>{
     res.render('main',{});
 });
 
-console.log(`The server was started in port: ${process.env.port}`);
-app.listen(process.env.port);
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, ()=>{
+    console.log(`The server was started in port: ${PORT}`)
+});
