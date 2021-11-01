@@ -1,0 +1,13 @@
+@font-face {
+    font-family: '93_Sarchia_TV';
+    src: url('93_Sarchia_TV.eot');
+    src: url('93_Sarchia_TV.eot?#iefix') format('embedded-opentype'),
+        url('93_Sarchia_TV.woff2') format('woff2'),
+        url('93_Sarchia_TV.woff') format('woff'),
+        url('93_Sarchia_TV.ttf') format('truetype'),
+        url('93_Sarchia_TV.svg#93_Sarchia_TV') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

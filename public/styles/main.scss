@@ -1,0 +1,326 @@
+@media (max-width: 850px){
+    body{
+        font-size: 12px !important;
+    }
+}
+
+
+$white-color: #f5f5f5;
+$black-color: #444444;
+$blue-color:  #5dc1d8;
+$grey-color:  #e5e5e5;
+$tomato-color:#e56353;
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+	font-family: '93_Sarchia_TV' !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+}
+
+body{
+    // width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox 64 */
+
+    a{
+        color: $white-color;
+        text-decoration: none;
+    }
+
+    a,p,h1,h2,h3,h4,h5,h6{
+        direction: rtl;
+    }
+
+    body * {
+        width: 100%;
+    }
+
+    .header-div{
+        
+        height: 100vh;
+        background: url('../assets/images/main.jpg');
+        background-size: cover;
+        // background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        
+        nav{
+            width: 85%;
+            height: 10%;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 1.2em;
+
+            .left-nav{
+                width: 70%;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5%;
+                
+
+            }
+
+            .right-nav{
+                width: 20%;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                font-size: 1.3em;
+            }
+        }
+
+        .welcome{
+            width: 100%;
+            height: 87%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .inner-container{
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                opacity: 0;
+                margin-top: 200px;
+                animation: landing-welcome 1s;
+                animation-fill-mode: forwards;
+    
+                .brand-name{
+                    font-size: 8em;
+                    color: $white-color;
+                    font-weight: bold !important;
+                    margin-bottom: 0.05em;
+                }
+    
+                .welcome-text{
+                    font-size: 1.5em;
+                    color: $white-color;
+    
+                    margin-bottom: 1em;
+
+                    text-shadow: 0px 0px 5px $black-color;
+                }
+    
+                .welcome-ask-button{
+                    padding: 0.8em 1em;
+                    font-size: 1.1em;
+        
+                    background-color: $blue-color;
+                    color: $white-color;
+        
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+
+    }
+    
+    .services-div{
+        // height: 150vh;
+        background-color: $grey-color;
+        padding: 10% 10% 5% 10%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 5%;
+
+        .services-header-texts{
+
+            height: 20%;
+            width: 70%;
+
+            margin-bottom: 10%;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .service-header{
+                font-size: 3em;
+                font-weight: bold !important;
+            }
+
+            .description-text{
+                font-size: 1.3em;
+                text-align: center;
+                margin: 4% 0%;
+            }
+            
+            .services-hr{
+                border: 0.1em solid $blue-color;
+                width: 40%;
+            }
+
+        }
+
+
+        .all-service{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            column-gap: 5%;
+
+            .a-service{
+                width: 350px;
+                aspect-ratio: 1/1;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                gap: 5%;
+
+                img{
+                    height: 25%;
+                }
+
+                .a-service-header{
+                    font-size: 2em;
+                }
+
+                .a-service-description{
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+    
+    .reviews-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+        padding: 5% 10%;
+
+        *{
+            text-align: center;
+        }
+
+        .reviews-header{
+            font-size: 3em;
+            font-weight: bold !important;
+        }
+
+        .reviews-hr{
+            width: 30%;
+            border: 0.1em solid $blue-color;
+            margin: 2% 0% 6% 0%;
+        }
+
+        .hr-divider{
+            width: 2% !important;
+            margin: 4% 0% 4% 0% !important;
+        }
+
+        .reviews-text, .reviews-author{
+            font-size: 1.3em;
+        }
+
+        .reviews-author {
+            margin-top: 2%;
+        }
+
+    }
+    
+    .learn-more-div{
+        padding: 4% 10%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $grey-color;
+
+        *{
+            margin: 0.5em 0%;
+        }
+
+        .learn-hr{
+            width: 20%;
+            border: 0.1em solid $blue-color;
+        }
+
+        .learn-input{
+            width: 20em;
+            margin-top: 2em;
+            padding: 0% 1%;
+            aspect-ratio: 10/1;
+            direction: rtl;
+            font-size: 1.1em;
+            
+            outline: none;
+
+        }
+
+        .learn-input:focus-visible{ 
+            direction: ltr;
+        }
+
+        .learn-button{
+            padding: 0.4em 1em;
+            font-size: 1.1em;
+
+            background-color: $blue-color;
+            color: $white-color;
+
+            border: none;
+            border-radius: 5px;
+        }
+
+    }
+}
+
+
+@keyframes landing-welcome {
+    0%{
+
+    }
+
+    100%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}

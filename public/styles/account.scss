@@ -1,0 +1,28 @@
+$white-color: #f5f5f5;
+$black-color: #444444;
+$blue-color:  #5dc1d8;
+$grey-color:  #e5e5e5;
+$tomato-color:#e56353;
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+	font-family: '93_Sarchia_TV' !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox 64 */
+}

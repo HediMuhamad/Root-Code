@@ -1,0 +1,40 @@
+{
+  "name": "rootcode",
+  "version": "0.5.0",
+  "description": "This site is made for practice only, it's like a blog describing services that a group of developers can do.",
+  "main": "router.js",
+  "scripts": {
+    "test": "nodemon router.js",
+    "active": "npm run program",
+    "scss": "node-sass -o ./public/styles/ ./public/styles/",
+    "watch:scss": "onchange \"./public/styles/*.scss\" -- npm run scss",
+    "program": "parallelshell \"node router.js\" \"npm run watch:scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HediMuhamad/Root-Code.git"
+  },
+  "keywords": [
+    "website",
+    "blog",
+    "developer",
+    "code",
+    "frontend"
+  ],
+  "author": "Hedi M. Sharif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HediMuhamad/Root-Code/issues"
+  },
+  "homepage": "https://github.com/HediMuhamad/Root-Code#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2"
+  }
+}
