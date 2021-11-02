@@ -7,10 +7,12 @@ const env = require("dotenv");
 env.config();
 
 app.use(express.static('public'));
+app.use('/node_modules/@fortawesome/fontawesome-free', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
 
-// app.get('/about',(req,res)=>{
-//     res.render('about',{});
-// });
+app.get('/about',(req,res)=>{
+    res.render('about',{});
+});
+
 
 // app.get('/ask',(req,res)=>{
 //     res.render('ask',{});
