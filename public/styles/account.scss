@@ -10,14 +10,14 @@ $border-blue: #0362df;
 $background-blue: #bdd0fb;
 
 @media (max-width: 1080px) {
-    body{
+    body {
         font-size: 13px;
     }
 }
 
 @media (max-width: 910px) {
 
-    body{
+    body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -54,20 +54,20 @@ $background-blue: #bdd0fb;
 }
 
 @media (max-width: 550px) {
-    body{
+    body {
         font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    body{
+    body {
         font-size: 12px;
     }
 }
 
 
 @media (max-width: 360px) {
-    body{
+    body {
         font-size: 10px;
     }
 }
@@ -87,7 +87,8 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
-.far, .fas{
+.far,
+.fas {
     font-family: "Font Awesome 5 Free" !important;
 }
 
@@ -95,7 +96,7 @@ body::-webkit-scrollbar {
     font-family: "Font Awesome 5 Brands" !important;
 }
 
-.english-text{
+.english-text {
     font-family: 'Gilroy' !important;
     font-weight: 600 !important;
     font-style: normal !important;
@@ -110,7 +111,23 @@ body {
 
     overflow-x: hidden;
     scrollbar-width: none;
+    position: relative;
     /* Firefox 64 */
+
+    &::before {
+        content: "";
+        background-image: url("../bg-element.png");
+        background-repeat: repeat;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        position: absolute;
+
+    }
+
+    & *{
+        position: relative;
+    }
 
     .image {
         width: 50%;
@@ -136,7 +153,7 @@ body {
             direction: rtl;
 
             padding: 0% 20%;
-            
+
             row-gap: 2em;
 
             h2 {
@@ -147,19 +164,20 @@ body {
                 color: $dark-blue;
 
                 font-size: 5em;
-                
+
                 margin-bottom: 0.1em;
 
                 #sub-header {
                     font-size: 0.26em;
                     text-align: center;
-                    .sub-header-icon{
+
+                    .sub-header-icon {
                         transform: translateY(3px);
                     }
                 }
             }
 
-            .input-collection-div{
+            .input-collection-div {
                 display: flex;
                 flex-direction: column;
                 gap: 2em;
@@ -195,15 +213,15 @@ body {
 
             }
 
-            .buttons-collector-div{
+            .buttons-collector-div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 1em;
                 width: 100%;
-                
-                button{
+
+                button {
                     width: 10em;
                     aspect-ratio: 5/1;
                     font-size: 1.2em;
@@ -215,7 +233,7 @@ body {
 
                     transition: 150ms linear;
 
-                    &:active{
+                    &:active {
                         box-shadow: 0 0 0.5em 1px rgba($color: $dark-blue, $alpha: 0.3);
                     }
 

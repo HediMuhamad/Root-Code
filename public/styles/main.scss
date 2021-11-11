@@ -21,6 +21,7 @@ $div-desc-margin: 1.2em 0;
     .welcome {
         height: 100% !important;
         font-size: 16px !important;
+        padding-top: 18em !important;
     }
 
     .welcome-ask-button {
@@ -150,7 +151,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
 
 
         nav {
@@ -159,6 +160,7 @@ body {
 
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
 
             font-size: 1.2em;
 
@@ -186,13 +188,13 @@ body {
 
         .welcome {
             width: 100%;
-            height: 87%;
+            height: 30%;
 
             display: flex;
             flex-direction: column;
             align-items: center;
             // justify-content: center;
-            padding-top: 18em;
+            padding-top: 10em;
 
             .inner-container {
                 width: 100%;
@@ -203,7 +205,7 @@ body {
                 justify-content: flex-start;
 
                 opacity: 0;
-                margin-top: 200px;
+                margin-top: 100px;
                 animation: landing-welcome 1s;
                 animation-fill-mode: forwards;
                 text-shadow: 0px 0px 5px $black-color;

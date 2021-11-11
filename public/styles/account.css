@@ -53,7 +53,8 @@ body::-webkit-scrollbar {
   font-style: normal !important;
   user-select: none; }
 
-.far, .fas {
+.far,
+.fas {
   font-family: "Font Awesome 5 Free" !important; }
 
 .fab {
@@ -72,7 +73,18 @@ body {
   height: 100vh;
   overflow-x: hidden;
   scrollbar-width: none;
+  position: relative;
   /* Firefox 64 */ }
+  body::before {
+    content: "";
+    background-image: url("../bg-element.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute; }
+  body * {
+    position: relative; }
   body .image {
     width: 50%;
     height: 100%;
