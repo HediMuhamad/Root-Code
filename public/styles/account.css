@@ -1,3 +1,46 @@
+@media (max-width: 1080px) {
+  body {
+    font-size: 13px; } }
+
+@media (max-width: 910px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 3% 0%;
+    row-gap: 3em !important; }
+  .image {
+    width: 50% !important;
+    height: min-content !important;
+    aspect-ratio: 1;
+    background-image: url("../assets/Account/1/2.svg") !important;
+    transform: translateY(3em) !important; }
+  .form {
+    width: 100% !important; } }
+
+@media (max-width: 770px) {
+  .image {
+    width: 60% !important;
+    transform: translateY(2em) !important; } }
+
+@media (max-width: 600px) {
+  .image {
+    width: 65% !important;
+    transform: translateY(1em) !important; } }
+
+@media (max-width: 550px) {
+  body {
+    font-size: 14px; } }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; } }
+
+@media (max-width: 360px) {
+  body {
+    font-size: 10px; } }
+
 body::-webkit-scrollbar {
   display: none; }
 
@@ -7,12 +50,104 @@ body::-webkit-scrollbar {
   padding: 0;
   font-family: '93_Sarchia_TV' !important;
   font-weight: normal !important;
+  font-style: normal !important;
+  user-select: none; }
+
+.far, .fas {
+  font-family: "Font Awesome 5 Free" !important; }
+
+.fab {
+  font-family: "Font Awesome 5 Brands" !important; }
+
+.english-text {
+  font-family: 'Gilroy' !important;
+  font-weight: 600 !important;
   font-style: normal !important; }
 
 body {
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   overflow-x: hidden;
   scrollbar-width: none;
   /* Firefox 64 */ }
+  body .image {
+    width: 50%;
+    height: 100%;
+    background: url("../assets/Account/1/1.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
+  body .form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: min-content; }
+    body .form form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      direction: rtl;
+      padding: 0% 20%;
+      row-gap: 2em; }
+      body .form form h2 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #0f056f;
+        font-size: 5em;
+        margin-bottom: 0.1em; }
+        body .form form h2 #sub-header {
+          font-size: 0.26em;
+          text-align: center; }
+          body .form form h2 #sub-header .sub-header-icon {
+            transform: translateY(3px); }
+      body .form form .input-collection-div {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        width: 100%; }
+      body .form form input {
+        width: 100%;
+        padding: 2% 1% 2% 5%;
+        font-size: 1.3em;
+        border: 0;
+        outline: 0;
+        user-select: auto;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(45deg, #0362df 100%, #6e7ff8 0%);
+        border-image-slice: 1;
+        color: #0f056f;
+        transition: 0.01s linear; }
+      body .form form .api-login-collection-div {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        color: #6e7ff8;
+        font-size: 1.5em; }
+        body .form form .api-login-collection-div *:hover {
+          color: darkblue;
+          transition: 200ms linear;
+          transform: scale(1.05); }
+      body .form form .buttons-collector-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        width: 100%; }
+        body .form form .buttons-collector-div button {
+          width: 10em;
+          aspect-ratio: 5/1;
+          font-size: 1.2em;
+          background-color: #bdd0fb;
+          color: #0f056f;
+          border: 2px solid #0362df;
+          border-radius: 5em;
+          transition: 150ms linear; }
+          body .form form .buttons-collector-div button:active {
+            box-shadow: 0 0 0.5em 1px rgba(15, 5, 111, 0.3); }

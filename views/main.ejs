@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link href="assets/fonts/stylesheet.css" rel="stylesheet">	
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">	
+    <link rel="stylesheet" href="assets/fonts/stylesheet-gilroy.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 	<title>RootCode</title>
 </head>
 <body>
@@ -20,8 +23,14 @@
 		<div class="welcome">
 			<div class="inner-container">
 				<p class="brand-name">ڕەگەکۆد</p>
-				<p class="welcome-text">خزمەتگوزاری بەرنامەسازی، کار و زانیاریەکانت ئاسانتر بگەیەنە</p>
+				<p class="welcome-text"><span>خزمەتگوزاری بەرنامەسازی، کار و زانیاریەکانت ئاسانتر بگەیەنە</span></p>
 				<button class="welcome-ask-button" onclick="window.open('ask', '_self')">داواکاری پێشکەشبکە</button>
+				<div class="minimized-nav-container">
+					<button class="far minimized-nav-button" onclick="minimizedNavButton(event)"></button>
+					<button class="nav-button-link" onclick="window.open('/account', '_self')">چوونەژوورەوە</button>
+					<button class="nav-button-link" onclick="window.open('/about', '_self')">دەربارە</button>
+					<button class="nav-button-link" onclick="window.open('ask', '_self')">پێشکەشکردنی داواکاری</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -30,7 +39,7 @@
 
 		<div class="services-header-texts">
 			<h2 class="service-header">خزمەتگوزاریەکانمان</h2>
-			<p class="description-text">جیاواز لە کۆمپانیا ڕکابەرەکانمان، ئێمە زۆرترین خزمەتگوزاری بە بەرزترین کوالێتی و کەمترین کات بەردەست ئەخەین، وە بێگومان ھەرزانترین نرخیش لای ئێمەیە.</p>
+			<p class="desc-text">جیاواز لە کۆمپانیا ڕکابەرەکانمان، ئێمە زۆرترین خزمەتگوزاری بە بەرزترین کوالێتی و کەمترین کات بەردەست ئەخەین، وە بێگومان ھەرزانترین نرخیش لای ئێمەیە</p>
 			<hr class="services-hr">	
 		</div>
 
@@ -38,49 +47,63 @@
 			<div class="a-service">
 				<img class="icons" src="assets/icons/001-web.svg" />
 				<p class="a-service-header">کۆمپیوتەر ئەپڵیکەیشن</p>
-				<p class="a-service-description">کۆمپیوتەر ئەپڵیکەشن باشترینە بۆ کاری ئۆفیس و فرۆشتگاکانتان، تاکو کاری بەشداربووەکانتان بەخێرایی و بەبێ کێشە بەڕێ بکەن.</p>
+				<p class="a-service-desc">کۆمپیوتەر ئەپڵیکەشن باشترینە بۆ کاری ئۆفیس و فرۆشتگاکانتان، تاکو کاری بەشداربووەکانتان بەخێرایی و بەبێ جێبەجێ بکەن.</p>
 			</div>
 
 			<div class="a-service">
 				<img class="icons" src="assets/icons/002-mobile-app.svg" />
 				<p class="a-service-header">موبایل ئەپڵیکەیشن</p>
-				<p class="a-service-description">تاکو بەشداربووەکنتان ھەمیشە ئاگاداری بەرھەم و کار و چالاکیەکانتان بن، پێویستت بە موبایل ئەپڵیکەیشن ئەبێت.</p>
+				<p class="a-service-desc">تاکو بەشداربووەکانتان ھەمیشە ئاگاداری بەرھەم و کار و چالاکیەکانتان بن، پێویستت بە موبایل ئەپڵیکەیشن ئەبێت.</p>
 			</div>
 
 			<div class="a-service">
 				<img class="icons" src="assets/icons/003-website.svg" />
 				<p class="a-service-header">وێبسایت و وێب ئەپڵیکەیشن</p>
-				<p class="a-service-description">ئەکرێت وەک جێگرەوەیەکی سادەتر بۆ موبایل ئەپڵیکەیشن و کۆمپیوتەر ئەپڵیکەیشن بەکاربھێنرێت، تاکو تێچووی کەمتری ھەبێت و فێربوونی ئاسان بێت.</p>
+				<p class="a-service-desc">ئەکرێت وەک جێگرەوەیەکی سادەتر بۆ موبایل ئەپڵیکەیشن و کۆمپیوتەر ئەپڵیکەیشن بەکاربھێنرێت، تاکو تێچوو کەمتر بێت و بەکارھێنانی ئاسان بێت.</p>
 			</div>
 
 			<div class="a-service">
 				<img class="icons" src="assets/icons/004-search.svg" />
 				<p class="a-service-header">پشکنین و دابینکردنی ئاسایش</p>
-				<p class="a-service-description">تاکو ئاڵوگۆڕە بازرگانیەکان و زانیاری خۆتان و کڕیارەکانتان بە پارێزراوی بمێنێتەوە، ئێمە ئاسایش بۆ نەرمەکاڵاکانتان دابین ئەکەین.</p>
+				<p class="a-service-desc">تاکو ئاڵوگۆڕە بازرگانیەکان و زانیاری خۆتان و کڕیارەکانتان بە پارێزراوی بمێنێتەوە، ئێمە ئاسایش بۆ نەرمەکاڵاکانتان دابین ئەکەین.</p>
 			</div>
 		</div>
 	</div>
 
 	<div class="reviews-div">
 		<h1 class="reviews-header">شاھێدی کارەکانمان</h1>
+		<p 	class="reviews-desc">گرنگیدان بە ڕاوبۆچوونی کڕیارەکانمان کاری لە پێشینەی ئێمەیە</p>
 		<hr class="reviews-hr">
-		<p  class="reviews-text">سڵاو، من ناوم (محمد)ـە، ویستم لە ڕێگەی موبایل ئەپڵیکەیشنەوە داھاتێکم دەستبکەوێت، کارەکانم سپارد بە ڕەگەکۆد بۆ دروستکردنی بازاڕێکی سەرھێڵ، لە ئێستادا خاوەنی بەرنامەیەکی خێرا و ڕووکار جوان و پارێزراوم، ھەموو ئاڵوگۆڕەکان بە پارێزراوی بەڕێوە ئەچن.</p>
-		<p  class="reviews-author">- محمد ئازاد -</p>
-		<hr class="reviews-hr hr-divider">
-		<p  class="reviews-text">سڵاو، کاری من دروستکردنی کەلوپەلی دەستکردی ئافرەتانە، پێگەیەکم پێویست بوو تاکو کارەکانمی لێ نمایش بکەم، بۆ ئەوەش وێبسایتم ھەڵبژارد، پێش دوو ھەفتە کاری دروستکردنەکەم بە ڕەگەکۆد سپارد، لە ئێستادا دەستمکردووە بە بڵاوکردنەوەی کارەکانم، سوپاس ڕەگەکۆد.</p>
-		<p  class="reviews-author">- گەشبین عەلی -</p>
-		<hr class="reviews-hr hr-divider">
-		<p  class="reviews-text">سڵاو، من ئاریم، خاوەنی ھەفتەبازاڕێکی گەورەم لە شاری سلێمانی، پێویستم بە سیستەمێکی گەورەبوو کە یارمەتیم بدات لە فرۆشتنی کاڵاکانم بە ئۆنڵاین لەسەر ھەموو ئامێرەکان، وە پێویستم بە کۆمپیتەر ئەڵیکەیشنێک بوو کە زانیاریەکانم لە یەک شوێن بۆ کۆبکاتەوە، وە پێویستبوو تەواوی سیستەمەکە پارێزراوبێت، بۆ ئەم کارەش ڕەگەکۆدم بە باشترین زانی، بە سوپاسەوە لە ئاستی پێشبینیەکانمدابوون، بەھۆی وەرگرتنی تەواوی خزمەتگوزاریەکانیان، داشکاندنیان بۆ کردم بە ڕێژەی دە لە سەد، دووبارە سوپاس.</p>
-		<p  class="reviews-author">- ئاری کەلھوڕی -</p>
+		<div class="reviews-content">
+			<div class="a-review-container">
+				<p  class="reviews-text">سڵاو، من ناوم (محمد)ـە، ویستم لە ڕێگەی موبایل ئەپڵیکەیشنەوە داھاتێکم دەستبکەوێت، کارەکانم سپارد بە <span class="blue-text">ڕەگەکۆد</span> بۆ دروستکردنی بازاڕێکی سەرھێڵ، لە ئێستادا من خاوەن بەرنامەیەکی خێرا و ڕووکار جوان و پارێزراوم، ھەموو ئاڵوگۆڕەکان بە پارێزراوی بەڕێوە ئەچن.</p>
+				<div class="review-author-container">
+					<p  class="reviews-author"><span><i class="far fa-circle"></i></span> محمد ئازاد <span><i class="fas fa-circle"></i></span></p>
+				</div>
+			</div>
+			<div class="a-review-container">
+				<p  class="reviews-text">سڵاو، کاری من دروستکردنی کەلوپەلی دەستکرە، تاکو باشترین بازاڕگەری بۆ کاڵاکانم بکەم پێویستم بە پێگەیەکی سەرھێڵ بوو، بۆ ئەوەش وێبسایتم ھەڵبژارد، پێش دوو ھەفتە کاری دروستکردنەکەم بە <span class="blue-text">ڕەگەکۆد</span> سپارد، وە لە ئێستاشدا دەستمکردووە بە بڵاوکردنەوەی کارەکانم، سوپاس <span class="blue-text">ڕەگەکۆد</span>.</p>
+				<div class="review-author-container">
+					<p  class="reviews-author"><span><i class="far fa-circle"></i></span> گەشبین عەلی <span><i class="far fa-circle"></i></span></p>
+				</div>
+			</div>
+			<div class="a-review-container">
+				<p  class="reviews-text">سڵاو، من ئاریم، خاوەنی ھەفتەبازاڕێکی گەورەم لە شاری سلێمانی، پێویستم بە سیستەمێکی گەورەبوو کە یارمەتیم بدات لە فرۆشتنی کاڵاکانم بە ئۆنڵاین لەسەر ھەموو ئامێرەکان، وە پێویستم بە کۆمپیوتەر ئەپڵیکەیشنێک بوو کە زانیاریەکانم لە یەک شوێن بۆ کۆبکاتەوە، وە پێویستبوو تەواوی سیستەمەکە پارێزراوبێت، بۆ ئەم کارەش (<span class="blue-text">ڕەگەکۆد</span>)ـم بە باشترین زانی، بە سوپاسەوە لە ئاستی پێشبینیەکانمدابوون، بەھۆی وەرگرتنی تەواوی خزمەتگوزاریەکانیان، داشکاندنیان بۆ کردم بە ڕێژەی دە لە سەد، دووبارە سوپاس.</p>
+				<div class="review-author-container">
+					<p  class="reviews-author"><span><i class="far fa-circle"></i></span> ئاری کەلھوڕی <span><i class="far fa-circle"></i></span></p>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<div class="learn-more-div">
 		<h1 class="learn-header">زیاتر بزانە</h1>
-		<p class="learn-text">بۆ ئاگاداربوون لە تەواوی کار و چالاکی و  ئۆفەرەکانمان، ئەتوانیت بە نامەبەری ئەلکترۆنی شوێنکەوتوومان بیت</p>
+		<p class="learn-desc">بۆ ئاگاداربوون لە تەواوی کار و چالاکی و  ئۆفەرەکانمان، ئەتوانیت بە نامەبەری ئەلکترۆنی شوێنکەوتوومان بیت</p>
 		<hr class="learn-hr">
 		<input class="learn-input" type="email" name="email" placeholder="نامەبەری ئەلکترۆنی (ئیمێڵ)">
 		<button class="learn-button">ئاگادارمبکەوە</button>
 	</div>
 </body>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="scripts/main.js"></script>
 </html>

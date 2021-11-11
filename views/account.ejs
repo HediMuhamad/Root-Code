@@ -2,16 +2,36 @@
 <html>
 
 <head>
-    
-	<link rel="stylesheet" type="text/css" href="styles/account.css">
-    <link href="assets/fonts/stylesheet.css" rel="stylesheet">	
-    <link type="text/css" rel="stylesheet" href="account.css" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="styles/account.css" type="text/css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet-gilroy.css">
     <title>Login to RootCode</title>
 </head>
 
 <body>
-    
+    <div class="image"></div>
+    <div class="form">
+        <form action="/account" method="post">
+            <h2>بەخێربێیت
+                <span id="sub-header">خۆشحاڵین بە بینینەوەت، خێرا خۆوکە ژوورا <i class="far fa-laugh-beam sub-header-icon"></i></span></h2>
+            <div class="input-collection-div">
+                <input class="input-field" type="text" name="emailOrUserName" placeholder="ناوی بەکارھێنەر یان نامەبەری ئەلکترۆنی" required>
+                <input class="input-field" type="password" name="password" placeholder="تێپەڕەوشە" required>
+            </div>
+            <div class="api-login-collection-div">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="buttons-collector-div">
+                <button type="submit">چوونە ژوورەوە</button>
+                <span class="account-alt sign-in-now" id="sign-alter-btn">یاخود ھەژمار دروست بکە</span>
+            </div>
+        </form>
+    </div>
 </body>
-<script src="scripts/account.js">
-</script>
+
+<script src="scripts/account.js"></script>
 </html>
