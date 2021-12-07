@@ -15,9 +15,9 @@ app.get('/about',(req,res)=>{
 });
 
 
-// app.get('/ask',(req,res)=>{
-//     res.render('ask',{});
-// });
+app.get('/ask',(req,res)=>{
+    res.render('ask',{});
+});
 
 app.get('/account',(req,res)=>{
     res.render('account',{});

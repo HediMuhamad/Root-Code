@@ -1,34 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/ask.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">	
+    <link rel="stylesheet" href="assets/fonts/stylesheet-gilroy.css">
     <title>Ask a request</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="image-container">
-            <img src="assets/images/message.png" class="message">
-        </div>
-        <div class="form-container">
-            <form class="form" action="#" method="POST">
-                <h1>داواکاریەکەت پێشکەش بکە:</h1>
-                <div class="name">
-                    <input type="text" name="name" placeholder="ناو" required>
+    <div class="image-container">
+    </div>
+    <div class="form-container">
+        <div class="contents"> 
+            <div class="headers-div">
+                <h1 class="header">داواکاریەکەت پێشکەش بکە</h1>
+                <h3 class="desc">ئێمەش بە خۆشحاڵیەوە وەڵامت دەدەینەوە</h3>
+            </div>
+            <form class="form" method="POST">
+                <div class="input-div">
+                    <h4 class="user-name-label">نـــاو</h4>
+                    <input class="input user-name" type="text" name="user-name" required>
                 </div>
-                <div class="email">
-                    <input type="email" name="email" placeholder="ھەژماری ئەلکترۆنی" required></div>
-                <div class="content">
-                    <textarea name="content" placeholder="ناوەڕۆک" required></textarea>
+                <div class="input-div">
+                    <h4 class="user-name-label">نـــاونیشانی ئەلکترۆنی</h4>
+                    <input class="input user-email english-text" type="email" name="user-email" required>
                 </div>
-                <div class="submit">
-                    <button type="submit">پێشکەشکردن</button>
+                <div class="input-div">
+                    <h4 class="user-name-label">نـــاوەڕۆک</h4>
+                    <textarea class="input user-requirements textarea" type="text" name="user-requirements" required></textarea>
+                </div>
+                <div class="input-div submit-btn-div">
+                    <button class="input submit-btn" type="submit">پێشکەشکردن</button>
                 </div>
             </form>
         </div>
     </div>
 </body>
+
 </html>

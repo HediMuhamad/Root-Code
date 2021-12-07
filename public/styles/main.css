@@ -84,7 +84,7 @@ body {
     width: 100%; }
   body .header-div {
     height: 100vh;
-    background: url("../assets/images/main.jpg");
+    background: url("../assets/imageAssets/Backgrounds/main.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

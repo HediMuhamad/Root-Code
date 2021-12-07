@@ -30,7 +30,7 @@ $background-blue: #bdd0fb;
         width: 50% !important;
         height: min-content !important;
         aspect-ratio: 1;
-        background-image: url('../assets/Account/1/2.svg') !important;
+        background-image: url('../assets/imageAssets/AccountPageImages/2.svg') !important;
         transform: translateY(3em) !important;
     }
 
@@ -133,7 +133,7 @@ body {
         width: 50%;
         height: 100%;
 
-        background: url('../assets/Account/1/1.svg');
+        background: url('../assets/imageAssets/AccountPageImages/1.svg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -173,6 +173,10 @@ body {
 
                     .sub-header-icon {
                         transform: translateY(3px);
+                    }
+
+                    .fa-heart{
+                        font-weight: 900 !important;
                     }
                 }
             }

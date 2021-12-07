@@ -14,7 +14,7 @@
     width: 50% !important;
     height: min-content !important;
     aspect-ratio: 1;
-    background-image: url("../assets/Account/1/2.svg") !important;
+    background-image: url("../assets/imageAssets/AccountPageImages/2.svg") !important;
     transform: translateY(3em) !important; }
   .form {
     width: 100% !important; } }
@@ -88,7 +88,7 @@ body {
   body .image {
     width: 50%;
     height: 100%;
-    background: url("../assets/Account/1/1.svg");
+    background: url("../assets/imageAssets/AccountPageImages/1.svg");
     background-repeat: no-repeat;
     background-position: center; }
   body .form {
@@ -118,6 +118,8 @@ body {
           text-align: center; }
           body .form form h2 #sub-header .sub-header-icon {
             transform: translateY(3px); }
+          body .form form h2 #sub-header .fa-heart {
+            font-weight: 900 !important; }
       body .form form .input-collection-div {
         display: flex;
         flex-direction: column;

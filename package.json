@@ -9,7 +9,7 @@
     "active": "npm run program",
     "scss": "node-sass -o ./public/styles/ ./public/styles/",
     "watch:scss": "onchange \"./public/styles/*.scss\" -- npm run scss",
-    "program": "parallelshell \"node router.js\" \"npm run watch:scss\""
+    "program": "parallelshell \"npm run watch:scss\" \"node router.js\""
   },
   "repository": {
     "type": "git",

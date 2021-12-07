@@ -17,7 +17,7 @@
   user-select: none; }
 
 body {
-  background-image: url("../assets/images/about.jpg");
+  background-image: url("../assets/imageAssets/Backgrounds/about.jpg");
   background-size: cover;
   width: 100vw;
   box-sizing: border-box;

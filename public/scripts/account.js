@@ -2,6 +2,7 @@ const subHeader = document.getElementById('sub-header');
 const inputCollectionDiv = document.getElementsByClassName('input-collection-div')[0];
 const signAlterBtn = document.getElementById('sign-alter-btn');
 const form = document.getElementsByTagName('form')[0];
+const signSelf = document.getElementsByClassName('sign-self')[0];
 var inputFields = Array.from(document.getElementsByClassName('input-field'));
 
 signAlterBtn.addEventListener('click', () => {
@@ -20,6 +21,8 @@ signAlterBtn.addEventListener('click', () => {
 
 		signAlterBtn.classList.replace('sign-in-now', 'sign-up-now');
 
+		signSelf.innerText = 'ھەژمار دروستکردن'
+
 	} else if (formNow == 'sign-up-now') {
 
 		inputCollectionDiv.style.gap = "2em";
@@ -31,6 +34,8 @@ signAlterBtn.addEventListener('click', () => {
 		subHeader.innerHTML = 'خۆشحاڵین بە بینینەوەت، خێرا خۆوکە ژوورا <i class="far fa-laugh-beam account-now-icon"></i>';
 
 		signAlterBtn.classList.replace('sign-up-now', 'sign-in-now');
+
+		signSelf.innerText = 'چوونە ژوورەوە'
 
 	}
 
